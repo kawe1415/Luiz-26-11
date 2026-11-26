@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Caracteres</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>1. Contador de caracteres</h2>
+
+    <p>Digite seu comentário:</p>
+
+    <!-- Campo para escrever o comentário -->
+    <textarea id="comentario" placeholder="Digite aqui..."></textarea>
+
+    <!-- Mostra a quantidade de caracteres -->
+    <p id="contador">0 caracteres</p>
+
+    <script>
+        // Seleciona o campo de comentário
+        const comentario = document.getElementById("comentario");
+
+        // Seleciona o contador
+        const contador = document.getElementById("contador");
+
+        // Conta os caracteres enquanto digita
+        comentario.addEventListener("input", function () {
+
+            let quantidade = comentario.value.length;
+
+            contador.textContent = quantidade + " caracteres";
+
+        });
+    </script>
+
+</body>
+
+</html>

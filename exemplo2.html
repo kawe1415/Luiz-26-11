@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const campoNome = document.querySelector('#nome');
+        const botao = document.querySelector('#botao');
+        const mensagem = document.querySelector('#mensagem');
+
+        function cumprimentar() {
+            const nome = campoNome.value; 
+            mensagem.textContent = `Olá, ${nome}!`;
+        }
+
+        botao.addEventListener("click", cumprimentar);
+    </script>
+</body>
+</html>
